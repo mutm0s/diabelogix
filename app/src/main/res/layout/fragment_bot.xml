@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:layout_marginTop="50dp">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/inputLayout"
+        android:layout_marginBottom="8dp"
+        android:overScrollMode="never"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/messageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/bot_input"
+        android:elevation="4dp"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type your message here"
+            android:inputType="textMultiLine"
+            android:minLines="1"
+            android:maxLines="4"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:imeOptions="actionSend"
+            android:layout_gravity="center_vertical" />
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/forward"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:contentDescription="Send Message" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="16dp">-->
+
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@id/inputLayout"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:overScrollMode="never"-->
+<!--        android:padding="8dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/messageContainer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="8dp" />-->
+
+<!--    </ScrollView>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/inputLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@drawable/bot_input"-->
+<!--        android:elevation="4dp"-->
+<!--        android:padding="8dp">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/messageEditText"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:hint="Type your message here"-->
+<!--            android:inputType="textMultiLine"-->
+<!--            android:minLines="1"-->
+<!--            android:maxLines="4"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="16sp"-->
+<!--            android:padding="8dp"-->
+<!--            android:imeOptions="actionSend"-->
+<!--            android:layout_gravity="center_vertical" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/sendButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/forward"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:padding="8dp"-->
+<!--            android:contentDescription="Send Message" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/incomingMessageLayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="64dp"-->
+<!--        android:background="@drawable/incoming_bg"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_above="@id/inputLayout"-->
+<!--        android:visibility="gone"-->
+<!--        android:elevation="2dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_gravity="start">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Incoming Message"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="14sp"-->
+<!--            android:layout_gravity="end" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/outgoingMessageLayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginStart="64dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:background="@drawable/outgoing_bg"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_above="@id/inputLayout"-->
+<!--        android:visibility="gone"-->
+<!--        android:elevation="2dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_gravity="end">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Outgoing Message"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textSize="14sp"-->
+<!--            android:layout_gravity="start" />-->
+
+<!--    </LinearLayout>-->
+
+<!--</RelativeLayout>-->

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/card_background1"
+        android:elevation="4dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dietary Log"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Input Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/input_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Food Name -->
+            <EditText
+                android:id="@+id/editText_food_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Food Name"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Quantity -->
+            <EditText
+                android:id="@+id/editText_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Quantity (e.g., 100g)"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Add Button -->
+            <Button
+                android:id="@+id/button_add_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/button_color"
+                android:layout_gravity="end"
+                android:padding="12dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Current Logs Title -->
+        <TextView
+            android:id="@+id/textView_current_logs_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Logs"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <!-- List View for Current Logs -->
+        <ListView
+            android:id="@+id/listView_current_logs"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/list_background"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="true" />
+
+        <!-- Past Logs Title -->
+        <TextView
+            android:id="@+id/textView_past_logs_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Past Logs"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <!-- List View for Past Logs -->
+        <ListView
+            android:id="@+id/listView_past_logs"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/list_background"
+            android:padding="8dp"
+            android:nestedScrollingEnabled="true" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/save_add_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/button_color"
+            android:layout_gravity="end"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp" />
+
+        <!-- Recommendation Title -->
+        <TextView
+            android:id="@+id/textView_recommendation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommendations"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Recommendation Text -->
+        <TextView
+            android:id="@+id/textView_recommendation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/text_secondary" />
+
+        <!-- Recommendations RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_recommendations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal" />
+
+        <!-- Loading ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+

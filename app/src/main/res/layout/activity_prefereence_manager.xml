@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Glucose Units Preferences -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferred Glucose Units"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupGlucoseUnits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButtonMgPerDl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mg/dL"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonMmolPerL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mmol/L"/>
+    </RadioGroup>
+
+    <!-- Dietary Preferences -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dietary Preferences"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Dietary Preferences -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dietary Preferences"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxVegetarian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vegetarian"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxVegan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vegan"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxGlutenFree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gluten-Free"/>
+
+
+    <!-- Notification Preferences -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notification Preferences"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <Switch
+        android:id="@+id/switchNotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable Notifications"
+        android:checked="true"/>
+
+
+</LinearLayout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/baseline_arrow_back_ios_24" />
+
+        <!-- Input fields -->
+        <EditText
+            android:id="@+id/pregnanciesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pregnancies"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/glucoseEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Glucose"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/bloodPressureEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Blood Pressure"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/skinThicknessEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skin Thickness"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/insulinEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Insulin"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/bmiEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="BMI"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/dpfEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Diabetes Pedigree Function"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/ageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Button to make prediction -->
+        <Button
+            android:id="@+id/predictButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Predict"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_background"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- CardView for prediction results -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- TextViews to display results -->
+                <TextView
+                    android:id="@+id/predictionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prediction: "
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/probabilityTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Probability: "
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingBottom="16dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:fillViewport="true">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="16dp">-->
+
+
+<!--    &lt;!&ndash; Input fields &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/pregnanciesEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Pregnancies"-->
+<!--        android:inputType="number"-->
+<!--        android:background="@drawable/edittext_background"-->
+<!--        android:textColor="@color/textColorPrimary"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/glucoseEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Glucose"-->
+<!--        android:inputType="number"-->
+<!--        android:background="@drawable/edittext_background"-->
+<!--        android:textColor="@color/textColorPrimary"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/bloodPressureEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Blood Pressure"-->
+<!--        android:inputType="number"-->
+<!--        android:background="@drawable/edittext_background"-->
+<!--        android:textColor="@color/textColorPrimary"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/skinThicknessEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Skin Thickness"-->
+<!--        android:inputType="number"-->
+<!--        android:background="@drawable/edittext_background"-->
+<!--        android:textColor="@color/textColorPrimary"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/insulinEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Insulin"-->
+<!--        android:inputType="number"-->
+<!--        android:background="@drawable/edittext_background"-->
+<!--        android:textColor="@color/textColorPrimary"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/bmiEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="BMI"-->
+<!--        android:inputType="numberDecimal"-->
+<!--        android:background="@drawable/edittext_background"-->
+<!--        android:textColor="@color/textColorPrimary"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/dpfEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Diabetes Pedigree Function"-->
+<!--        android:inputType="numberDecimal"-->
+<!--        android:background="@drawable/edittext_background"-->
+<!--        android:textColor="@color/textColorPrimary"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/ageEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Age"-->
+<!--        android:inputType="number"-->
+<!--        android:background="@drawable/edittext_background"-->
+<!--        android:textColor="@color/textColorPrimary"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="12dp"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+<!--    &lt;!&ndash; Button to make prediction &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/predictButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Predict"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:background="@drawable/button_background"-->
+<!--        android:textSize="18sp"-->
+<!--        android:padding="16dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginBottom="16dp"/>-->
+
+<!--    &lt;!&ndash; TextViews to display results &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/predictionTextView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Prediction: "-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:paddingTop="16dp"-->
+<!--        android:paddingBottom="8dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/probabilityTextView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Probability: "-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:paddingBottom="16dp"/>-->
+
+
+
+<!--</LinearLayout>-->
+<!--</ScrollView>-->

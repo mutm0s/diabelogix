@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:layout_marginTop="50dp">
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/person"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_shape" />
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_picture"
+        android:layout_centerHorizontal="true"
+        android:text="User"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+
+    <LinearLayout
+        android:id="@+id/sharedValueSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/heart_rate"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:text="Insulin"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary" />
+
+    <!-- Calories -->
+    <TextView
+        android:id="@+id/calories"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Calories\n756cal"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary" />
+
+    <!-- Weight -->
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Weight\n103lbs"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary" />
+
+</LinearLayout>
+
+    <!-- My Saved -->
+    <LinearLayout
+        android:id="@+id/my_saved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/sharedValueSet"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_archive_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="My Saved"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Appointments -->
+    <LinearLayout
+        android:id="@+id/appointments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/my_saved"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_calendar_today_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Appointments"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- FAQs -->
+    <LinearLayout
+        android:id="@+id/faqs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/appointments"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/help" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="FAQs"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Logout -->
+    <LinearLayout
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/faqs"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/power" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Logout"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+

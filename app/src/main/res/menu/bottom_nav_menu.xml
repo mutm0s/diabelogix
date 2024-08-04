@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_carbs_insulin"
+        android:icon="@drawable/baseline_local_dining_24"
+        android:title="Carbs &amp; Insulin" />
+    <item
+        android:id="@+id/navigation_glucose_reading"
+        android:icon="@drawable/baseline_health_and_safety_24"
+        android:title="Glucose Reading" />
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/dashboard_24"
+        android:title="Dashboard" />
+</menu>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color"
+    tools:context=".AddWeightActivity">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/baseline_arrow_back_ios_24" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="ADD WEIGHT"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_below="@+id/btn_back"/>
+
+    <EditText
+        android:id="@+id/weight_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Weight Value"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/title"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/weight_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Date"
+        android:inputType="date"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/weight_value" />
+
+    <EditText
+        android:id="@+id/weight_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Time"
+        android:inputType="time"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/weight_date" />
+
+    <Button
+        android:id="@+id/save_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Weight"
+        android:backgroundTint="@color/primary"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_below="@id/weight_time"
+        android:layout_centerHorizontal="true"
+        android:elevation="2dp"
+        android:fontFamily="sans-serif-medium" />
+</RelativeLayout>
+

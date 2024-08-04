@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <!-- Top Section -->
+        <TextView
+            android:id="@+id/text_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="June 23, 2024"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true" />
+
+        <!-- Glucose Section -->
+        <LinearLayout
+            android:id="@+id/glucose_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_below="@id/text_date_time"
+            android:layout_marginTop="8dp">
+
+            <FrameLayout
+                android:id="@+id/glucose_container"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/graph_background"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/text_glucose_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Glucose"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/text_glucose_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="86"
+                        android:textSize="40sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/text_glucose_units"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mg/dl"
+                        android:textSize="14sp"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Duo Section -->
+        <LinearLayout
+            android:id="@+id/duo_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_below="@id/glucose_section"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <FrameLayout
+                android:id="@+id/bmi_container"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/graph_background"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/bmi" />
+
+                <TextView
+                    android:id="@+id/text_bmi_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BMI"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="55dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/text_bmi_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24"
+                    android:textSize="40sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="70dp"
+                    android:textColor="@android:color/black" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/weight_container"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:background="@drawable/graph_background"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/weight" />
+
+                <TextView
+                    android:id="@+id/text_weight_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="55dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/text_weight_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    android:textSize="40sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="70dp"
+                    android:textColor="@android:color/black" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Analysis Section -->
+        <TextView
+            android:id="@+id/analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analysis"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/duo_section"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Graph Section -->
+        <FrameLayout
+            android:id="@+id/graph_container"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_below="@id/analysis"
+            android:layout_margin="8dp"
+            android:background="@drawable/graph_background">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/glucose_trend_chart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"/>
+        </FrameLayout>
+
+        <!-- New Entry Section -->
+        <TextView
+            android:id="@+id/new_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Entry"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:padding="10dp"
+            android:layout_below="@id/graph_container"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/entries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginBottom="40dp"
+            android:layout_below="@id/new_entry"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bmi"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="BMI"
+                android:padding="10dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/weight"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:padding="10dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/glucose"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Glucose"
+                android:padding="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="0dp"-->
+<!--    >-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="0dp">-->
+
+<!--        &lt;!&ndash; Top Section &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/text_date_time"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="June 23, 2024"-->
+<!--            android:textSize="18sp"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="16dp"-->
+<!--            android:background="@color/colorPrimary"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:layout_alignParentTop="true" />-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/glucose_section"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_below="@id/text_date_time"-->
+<!--            android:layout_marginTop="8dp">-->
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/glucose_container"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:background="@drawable/graph_background">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_glucose_title"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Glucose"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:textColor="@android:color/black" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginTop="50dp">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text_glucose_number"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="86"-->
+<!--                        android:textSize="40sp"-->
+<!--                        android:textColor="@android:color/black" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text_glucose_dots"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="..."-->
+<!--                        android:textSize="30sp"-->
+<!--                        android:layout_marginStart="60dp"-->
+<!--                        android:layout_marginTop="-10dp"-->
+<!--                        android:textColor="@android:color/black" />-->
+<!--                </LinearLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_glucose_units"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="mg/dl"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:layout_marginStart="90dp"-->
+<!--                    android:layout_marginTop="80dp"-->
+<!--                    android:textColor="@android:color/black" />-->
+<!--            </FrameLayout>-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/duo_section"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_below="@id/glucose_section"-->
+<!--            android:layout_marginTop="8dp">-->
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/bmi_container"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:background="@drawable/graph_background">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:src="@drawable/bmi" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_bmi_title"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="BMI"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_marginTop="60dp"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@android:color/black" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_bmi_number"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="24"-->
+<!--                    android:textSize="40sp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="70dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@android:color/black" />-->
+<!--            </FrameLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/weight_container"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:background="@drawable/graph_background">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:src="@drawable/weight" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_weight_title"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Weight"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_marginTop="60dp"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@android:color/black" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_weight_number"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="70"-->
+<!--                    android:textSize="40sp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="70dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@android:color/black" />-->
+<!--            </FrameLayout>-->
+<!--        </LinearLayout>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/analysis"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Analysis"-->
+<!--            android:textSize="18sp"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_below="@id/duo_section"-->
+<!--            android:background="@color/colorPrimary"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:layout_marginTop="8dp" />-->
+
+<!--        <FrameLayout-->
+<!--            android:id="@+id/graph_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="260dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:layout_below="@id/analysis"-->
+<!--            android:background="@drawable/graph_background">-->
+
+<!--            <com.github.mikephil.charting.charts.LineChart-->
+<!--                android:id="@+id/glucose_trend_chart"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="250dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"/>-->
+<!--        </FrameLayout>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/new_entry"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="New Entry"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_below="@id/graph_container"-->
+<!--            android:textColor="@android:color/black" />-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/entries"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="40dp"-->
+<!--            android:layout_below="@id/new_entry">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/bmi"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="BMI"-->
+<!--                android:padding="10dp"-->
+<!--                android:layout_marginEnd="4dp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/weight"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Weight"-->
+<!--                android:padding="10dp"-->
+<!--                android:layout_marginEnd="4dp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/glucose"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Glucose"-->
+<!--                android:padding="10dp" />-->
+<!--        </LinearLayout>-->
+<!--    </RelativeLayout>-->
+<!--</ScrollView>-->
+

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/users"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/profile_picture"
+        android:background="@drawable/circle_background"
+        android:padding="8dp"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user_name"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user_email"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+         />
+
+</LinearLayout>

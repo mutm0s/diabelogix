@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Glucose Level Input -->
+    <TextView
+        android:id="@+id/textViewGlucoseLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glucose Level:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextGlucoseLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewGlucoseLevel"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="numberDecimal"/>
+
+    <!-- Diet Input -->
+    <TextView
+        android:id="@+id/textViewDiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diet:"
+        android:textSize="18sp"
+        android:layout_below="@id/editTextGlucoseLevel"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDiet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDiet"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="text"/>
+
+    <!-- Exercise Input -->
+    <TextView
+        android:id="@+id/textViewExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise:"
+        android:textSize="18sp"
+        android:layout_below="@id/editTextDiet"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewExercise"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="text"/>
+
+    <!-- Insulin Input -->
+    <TextView
+        android:id="@+id/textViewInsulin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insulin Intake:"
+        android:textSize="18sp"
+        android:layout_below="@id/editTextExercise"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextInsulin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewInsulin"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="numberDecimal"/>
+
+    <!-- Prediction Button -->
+    <Button
+        android:id="@+id/buttonPredict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextInsulin"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Predict"
+        android:textSize="18sp"/>
+
+    <!-- Prediction Result -->
+    <TextView
+        android:id="@+id/textViewPredictionResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonPredict"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageView_food"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/textView_food_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textSize="16sp" />
+</LinearLayout>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="8dp"-->
+<!--    android:background="@drawable/rounded_corner_background"-->
+<!--    android:layout_marginBottom="8dp">-->
+
+<!--    &lt;!&ndash; Food Logo &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView_food_logo"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:src="@drawable/lunch_dining"-->
+<!--        android:contentDescription="Food Logo" />-->
+
+<!--    &lt;!&ndash; Food Name &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView_food_name"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Food Name"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_gravity="center_vertical" />-->
+<!--</LinearLayout>-->

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dietary Log"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium"/>
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Food Name -->
+        <EditText
+            android:id="@+id/editText_food_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Food Name"
+            android:background="@drawable/rounded_edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Quantity -->
+        <EditText
+            android:id="@+id/editText_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantity (e.g., 100g)"
+            android:background="@drawable/rounded_edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Add Button -->
+        <Button
+            android:id="@+id/button_add_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_gravity="end"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:elevation="2dp"
+            android:fontFamily="sans-serif-medium"/>
+    </LinearLayout>
+
+    <!-- Past Logs Section -->
+    <TextView
+        android:id="@+id/textView_past_logs_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Past Logs"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium"/>
+
+    <!-- List View for Past Logs -->
+    <ListView
+        android:id="@+id/listView_past_logs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/divider"
+        android:dividerHeight="1dp"
+        android:background="@drawable/rounded_listview"/>
+
+    <!-- Recommendation Section -->
+    <TextView
+        android:id="@+id/textView_recommendation_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommendations"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"/>
+
+
+</LinearLayout>
+
+

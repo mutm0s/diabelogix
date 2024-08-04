@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Date and Time Pickers -->
+        <LinearLayout
+            android:id="@+id/times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corner_background"
+            android:padding="16dp">
+
+            <!-- Date Picker Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Date Picker -->
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false" />
+
+            <!-- Time Picker Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Time Picker -->
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+
+        <!-- Glucose Reading Input Section -->
+        <TextView
+            android:id="@+id/textViewGlucose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Glucose Reading:"
+            android:textSize="20sp"
+            android:layout_below="@id/times"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextGlucose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter glucose reading"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/textViewGlucose"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_below="@id/editTextGlucose"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+    </RelativeLayout>
+</ScrollView>
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="16dp">-->
+
+<!--        &lt;!&ndash; Date and Time Pickers &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/times"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:background="@drawable/rounded_corner_background"-->
+<!--            android:padding="16dp">-->
+
+<!--            &lt;!&ndash; Date Picker Label &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Date"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginBottom="8dp" />-->
+
+<!--            &lt;!&ndash; Date Picker &ndash;&gt;-->
+<!--            <DatePicker-->
+<!--                android:id="@+id/datePicker"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:datePickerMode="spinner"-->
+<!--                android:calendarViewShown="false" />-->
+
+<!--            &lt;!&ndash; Time Picker Label &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Time"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginBottom="8dp" />-->
+
+<!--            &lt;!&ndash; Time Picker &ndash;&gt;-->
+<!--            <TimePicker-->
+<!--                android:id="@+id/timePicker"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:timePickerMode="spinner"-->
+<!--                android:background="@android:color/transparent" />-->
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Glucose Reading Input Section &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/textViewGlucose"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Enter Glucose Reading:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_below="@id/times"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginStart="16dp"/>-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextGlucose"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter glucose reading"-->
+<!--            android:inputType="numberDecimal"-->
+<!--            android:layout_below="@id/textViewGlucose"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/buttonSubmit"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Submit"-->
+<!--            android:layout_below="@id/editTextGlucose"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="16dp"/>-->
+
+<!--    </RelativeLayout>-->
+
+<!--</ScrollView>-->
+

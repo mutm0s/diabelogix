@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Account Management">
+        <Preference
+            android:key="change_password"
+            android:title="Change Password"
+            android:summary="Update your password" />
+        <Preference
+            android:key="update_email"
+            android:title="Update Email"
+            android:summary="Change your email address" />
+        <Preference
+            android:key="manage_profile"
+            android:title="Manage Profile"
+            android:summary="Update your personal details including profile image" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Health Data Preferences">
+        <ListPreference
+            android:key="measurement_units"
+            android:title="Measurement Units"
+            android:summary="Choose units for blood glucose"
+            android:entries="@array/measurement_units"
+            android:entryValues="@array/measurement_units_values" />
+        <EditTextPreference
+            android:key="target_ranges"
+            android:title="Target Ranges"
+            android:summary="Set your personalized target ranges"
+            android:inputType="number" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Notifications">
+        <SwitchPreferenceCompat
+            android:key="alert_settings"
+            android:title="Alert Settings"
+            android:summary="Customize alert settings" />
+        <SwitchPreferenceCompat
+            android:key="daily_summary"
+            android:title="Daily Summary"
+            android:summary="Receive daily summaries or reports" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="App Theme and Display">
+        <ListPreference
+            android:key="theme_selection"
+            android:title="Theme Selection"
+            android:summary="Choose app theme"
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_values" />
+        <SeekBarPreference
+            android:key="font_size"
+            android:title="Font Size"
+            android:summary="Adjust font size for readability" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Data Management">
+        <Preference
+            android:key="export_data"
+            android:title="Export Data"
+            android:summary="Export your health data to a CSV file" />
+        <Preference
+            android:key="backup_restore"
+            android:title="Backup and Restore"
+            android:summary="Backup and restore your data" />
+        <Preference
+            android:key="data_privacy"
+            android:title="Data Privacy"
+            android:summary="Manage data sharing permissions" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Integrations">
+        <Preference
+            android:key="connect_devices"
+            android:title="Connect Devices"
+            android:summary="Pair with compatible devices" />
+        <Preference
+            android:key="sync_apps"
+            android:title="Sync with Other Apps"
+            android:summary="Sync data with other health apps" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Support and Feedback">
+        <Preference
+            android:key="contact_support"
+            android:title="Contact Support"
+            android:summary="Get help and troubleshooting" />
+        <Preference
+            android:key="send_feedback"
+            android:title="Send Feedback"
+            android:summary="Provide feedback or report bugs" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About and Legal">
+        <Preference
+            android:key="about_app"
+            android:title="About the App"
+            android:summary="App version and developer info" />
+        <Preference
+            android:key="terms_conditions"
+            android:title="Terms and Conditions"
+            android:summary="View terms of use and privacy policy" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--    <PreferenceCategory android:title="Account Management">-->
+<!--        <EditTextPreference-->
+<!--            android:key="change_password"-->
+<!--            android:title="Change Password"-->
+<!--            android:summary="Update your password"-->
+<!--            android:inputType="textPassword" />-->
+<!--        <EditTextPreference-->
+<!--            android:key="update_email"-->
+<!--            android:title="Update Email"-->
+<!--            android:summary="Change your email address"-->
+<!--            android:inputType="textEmailAddress" />-->
+<!--        <Preference-->
+<!--            android:key="manage_profile"-->
+<!--            android:title="Manage Profile"-->
+<!--            android:summary="Update your personal details" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory android:title="Health Data Preferences">-->
+<!--        <ListPreference-->
+<!--            android:key="measurement_units"-->
+<!--            android:title="Measurement Units"-->
+<!--            android:summary="Choose units for blood glucose"-->
+<!--            android:entries="@array/measurement_units"-->
+<!--            android:entryValues="@array/measurement_units_values" />-->
+<!--        <EditTextPreference-->
+<!--            android:key="target_ranges"-->
+<!--            android:title="Target Ranges"-->
+<!--            android:summary="Set your personalized target ranges"-->
+<!--            android:inputType="number" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory android:title="Notifications">-->
+<!--        <SwitchPreferenceCompat-->
+<!--            android:key="alert_settings"-->
+<!--            android:title="Alert Settings"-->
+<!--            android:summary="Customize alert settings" />-->
+<!--        <SwitchPreferenceCompat-->
+<!--            android:key="daily_summary"-->
+<!--            android:title="Daily Summary"-->
+<!--            android:summary="Receive daily summaries or reports" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory android:title="App Theme and Display">-->
+<!--        <ListPreference-->
+<!--            android:key="theme_selection"-->
+<!--            android:title="Theme Selection"-->
+<!--            android:summary="Choose app theme"-->
+<!--            android:entries="@array/theme_options"-->
+<!--            android:entryValues="@array/theme_values" />-->
+<!--        <SeekBarPreference-->
+<!--            android:key="font_size"-->
+<!--            android:title="Font Size"-->
+<!--            android:summary="Adjust font size for readability" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory android:title="Data Management">-->
+<!--        <Preference-->
+<!--            android:key="export_data"-->
+<!--            android:title="Export Data"-->
+<!--            android:summary="Export your health data to a CSV file" />-->
+<!--        <Preference-->
+<!--            android:key="backup_restore"-->
+<!--            android:title="Backup and Restore"-->
+<!--            android:summary="Backup and restore your data" />-->
+<!--        <Preference-->
+<!--            android:key="data_privacy"-->
+<!--            android:title="Data Privacy"-->
+<!--            android:summary="Manage data sharing permissions" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory android:title="Integrations">-->
+<!--        <Preference-->
+<!--            android:key="connect_devices"-->
+<!--            android:title="Connect Devices"-->
+<!--            android:summary="Pair with compatible devices" />-->
+<!--        <Preference-->
+<!--            android:key="sync_apps"-->
+<!--            android:title="Sync with Other Apps"-->
+<!--            android:summary="Sync data with other health apps" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory android:title="Support and Feedback">-->
+<!--        <Preference-->
+<!--            android:key="contact_support"-->
+<!--            android:title="Contact Support"-->
+<!--            android:summary="Get help and troubleshooting" />-->
+<!--        <Preference-->
+<!--            android:key="send_feedback"-->
+<!--            android:title="Send Feedback"-->
+<!--            android:summary="Provide feedback or report bugs" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory android:title="About and Legal">-->
+<!--        <Preference-->
+<!--            android:key="about_app"-->
+<!--            android:title="About the App"-->
+<!--            android:summary="App version and developer info" />-->
+<!--        <Preference-->
+<!--            android:key="terms_conditions"-->
+<!--            android:title="Terms and Conditions"-->
+<!--            android:summary="View terms of use and privacy policy" />-->
+<!--    </PreferenceCategory>-->
+
+<!--</PreferenceScreen>-->

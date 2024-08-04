@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Diabetecs</string>
+    <string name="profile_picture">User</string>
+    <string name="app_logo">App Logo</string>
+    <string name="last_insulin_dose">Last Insulin Dose: %1$s at %2$s</string>
+    <string name="insulin_on_board">Insulin on Board: %1$s</string>
+    <string name="last_meal">Last Meal: %1$s - %2$s at %3$s</string>
+    <string name="daily_caloric_intake">Daily Caloric Intake: %1$s kcal</string>
+    <string name="steps">Steps: %1$s / %2$s</string>
+    <string name="last_exercise">Last Exercise: %1$s at %2$s</string>
+    <string name="notification">Reminder: %1$s at %2$s</string>
+    <string name="check_glucose_levels">Reminder: Check Glucose Levels at %1$s</string>
+    <string name="take_insulin">Reminder: Take Insulin at %1$s</string>
+    <string name="log_meal">Reminder: Log Meal at %1$s</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color"
+    tools:context=".AddDoctorActivity">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/baseline_arrow_back_ios_24" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="ADD A DOCTOR"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_below="@+id/btn_back"/>
+
+    <!-- Doctor Name -->
+    <EditText
+        android:id="@+id/doctor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Doctor Name"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/title" />
+
+    <!-- Doctor Specialty -->
+    <EditText
+        android:id="@+id/doctor_specialty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Specialty"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/doctor_name" />
+
+    <!-- Doctor Rating -->
+    <EditText
+        android:id="@+id/doctor_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rating"
+        android:inputType="numberDecimal"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/doctor_specialty" />
+
+    <!-- Doctor Distance -->
+    <EditText
+        android:id="@+id/doctor_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Distance"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/doctor_rating" />
+
+    <!-- Doctor Image URL -->
+    <EditText
+        android:id="@+id/doctor_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image URL"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/doctor_distance" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Doctor"
+        android:backgroundTint="@color/primary"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/doctor_image"
+        android:layout_centerHorizontal="true"
+        android:elevation="2dp"
+        android:fontFamily="sans-serif-medium" />
+</RelativeLayout>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="16dp"-->
+<!--    tools:context=".AddDoctorActivity">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/title"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="ADD A DOCTOR"-->
+<!--        android:textAlignment="center"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/primary" />-->
+
+<!--    &lt;!&ndash; Doctor Name &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/doctor_name"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Doctor Name"-->
+<!--        android:layout_marginBottom="16dp" />-->
+
+<!--    &lt;!&ndash; Doctor Specialty &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/doctor_specialty"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Specialty"-->
+<!--        android:layout_below="@id/doctor_name"-->
+<!--        android:layout_marginBottom="16dp" />-->
+
+<!--    &lt;!&ndash; Doctor Rating &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/doctor_rating"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Rating"-->
+<!--        android:layout_below="@id/doctor_specialty"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:inputType="numberDecimal" />-->
+
+<!--    &lt;!&ndash; Doctor Distance &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/doctor_distance"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Distance"-->
+<!--        android:layout_below="@id/doctor_rating"-->
+<!--        android:layout_marginBottom="16dp" />-->
+
+<!--    &lt;!&ndash; Doctor Image URL &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/doctor_image"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Image URL"-->
+<!--        android:layout_below="@id/doctor_distance"-->
+<!--        android:layout_marginBottom="16dp" />-->
+
+<!--    &lt;!&ndash; Save Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/save_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Save Doctor"-->
+<!--        android:layout_below="@id/doctor_image"-->
+<!--        android:layout_centerHorizontal="true" />-->
+<!--</RelativeLayout>-->
